@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class WallHit : MonoBehaviour
 {
+
+    // This variable enables the if statement
+    bool enableStatement = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,12 +22,17 @@ public class WallHit : MonoBehaviour
 
     public void ChildCollision(Collision collision)
     {
-        // Handle the collision.
-        Debug.Log("Wall detected a collision with " + collision.gameObject.name);
-        // Change the color of the wall by changing the color of children.
-        foreach (Transform child in transform)
+        // If the object collides with the player, change children.
+        if (collision.gameObject.tag == "Player" && enableStatement)
         {
-            child.GetComponent<MeshRenderer>().material.color = Color.red;
+            Debug.Log($"You hit the Frame!");
+            // Change the color and tag of all children.
+            foreach (Transform child in transform)
+            {
+                child.gameObject.tag = "Hit";
+                child.GetComponent<MeshRenderer>().material.color = Color.red;
+            }
+            enableStatement = false;
         }
     }
 }

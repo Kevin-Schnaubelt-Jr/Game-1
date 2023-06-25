@@ -23,6 +23,7 @@ public class Mover : MonoBehaviour
         Debug.Log("Welcome to the game!");
         Debug.Log("Move your player with WASD or arrow keys");
         Debug.Log("Don't hit the walls!");
+        Debug.Log("Par score is 1");
     }
 
     void PlayerMovement()
