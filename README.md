@@ -3,4 +3,4 @@
 
 ### Do not bump into the things, I SWEAR TO HECK
 
-<img src="/static/game-1screen2EDIT.png>" alt="Game Screenshot"/>
+<img src="/static/game-1screen2EDIT.png" alt="Game Screenshot"/>
